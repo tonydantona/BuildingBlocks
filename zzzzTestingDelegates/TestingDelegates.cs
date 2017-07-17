@@ -9,11 +9,6 @@ namespace zzzzTestingDelegates
     [TestFixture]
     public class TestingDelegates
     {
-        // to get to linq we need extension methods - above (ToClicks) example, then simple one using sequence.
-        // then maybe introduce delegates - simple -> anon -> lambda
-        // then we summarize with writing our linq Where implementation
-        // i would like to talk about interfaces, maybe an IEquatable or example or array sort example
-
         // declare the delegate type
         public delegate void MessageProc(string s);
         [Test]
@@ -82,5 +77,30 @@ namespace zzzzTestingDelegates
             var result = stops.Where(x => x.StopID > 3);
         }
 
+        [Test]
+        public void TestPassingDelegate()
+        {
+            var delClass = new DelegatesAsParams();
+            Action<int> currentDisplay = CurrentDisplay;
+            delClass.DisplayMe(currentDisplay);
+        }
+
+        private void CurrentDisplay(int i)
+        {
+            Console.WriteLine(i);
+        }
+
+        [Test]
+        public void TestPassingDelegateUsingLambda()
+        {
+            var delClass = new DelegatesAsParams();
+            Func<int, bool> predicate = x => x > 3;
+
+            var result = delClass.Filter(predicate);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }

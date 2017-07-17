@@ -17,9 +17,9 @@ namespace zzzTestingIEnumerable
         [Test]
         public void TestExtenstionMethods()
         {
-            var clicks = ToClicks("10:00");
-            //var clicks = "10:30".ToClicks();
-            //Console.WriteLine(clicks);
+            //var clicks = ToClicks("10:00");
+            var clicks = "10:30".ToClicks();
+            Console.WriteLine(clicks);
         }
 
         public int ToClicks(string time)
@@ -44,6 +44,7 @@ namespace zzzTestingIEnumerable
             var stops = new Stops();
 
             var sorted = stops.OrderByDescending(s => s.StopID);
+            sorted.ElementAt(0).StopID = 88;
 
             var result = stops.Where(x => x.StopID % 2 == 0);
 
@@ -56,6 +57,8 @@ namespace zzzTestingIEnumerable
             {
                 Debug.WriteLine(stop);
             }
+
+            
 
         }
     }
