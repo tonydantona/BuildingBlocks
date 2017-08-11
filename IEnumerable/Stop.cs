@@ -2,7 +2,7 @@ using System;
 
 namespace IEnumerable
 {
-    public class Stop : IEquatable<Stop>
+    public class Stop : IEquatable<Stop>, IComparable<Stop>
     {
         public int StopID { get; set; }
 
@@ -27,6 +27,17 @@ namespace IEnumerable
         {
             //Get hash code for the StopID field since that's our basis for comparison.
             return StopID.GetHashCode();
+        }
+
+        public int CompareTo(Stop other)
+        {
+            if (this.StopID == other.StopID)
+                return 0;
+
+            if (this.StopID > other.StopID)
+                return 1;
+
+            return -1;
         }
 
         public override string ToString()

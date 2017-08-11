@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEnumerable", "IEnumerable\IEnumerable.csproj", "{14A0967E-1D9C-4BB7-9EBA-F618A602F156}"
 EndProject
@@ -10,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingDelegates", "UnderstandingDelegates\UnderstandingDelegates.csproj", "{6D8E7E63-CCFB-4645-89F3-A1C36FA5F7A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzzTestingDelegates", "zzzzTestingDelegates\zzzzTestingDelegates.csproj", "{65341D94-AB68-47FB-BC04-0791A45DBFB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingEvents", "UnderstandingEvents\UnderstandingEvents.csproj", "{0A4FCC68-62CE-4BCC-999B-682AE0B8A48C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzzzTestingEvents", "zzzzzTestingEvents\zzzzzTestingEvents.csproj", "{E6882E46-2D65-4443-B491-CBFB1EB4FEEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingInterfaces", "UnderstandingInterfaces\UnderstandingInterfaces.csproj", "{840E277A-8315-4B6D-B56C-7282B02EAB25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzzzTestingInterfaces", "zzzzzTestingInterfaces\zzzzzTestingInterfaces.csproj", "{532F2594-B545-4F38-8BFF-017984E9B326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{65341D94-AB68-47FB-BC04-0791A45DBFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65341D94-AB68-47FB-BC04-0791A45DBFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65341D94-AB68-47FB-BC04-0791A45DBFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4FCC68-62CE-4BCC-999B-682AE0B8A48C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4FCC68-62CE-4BCC-999B-682AE0B8A48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4FCC68-62CE-4BCC-999B-682AE0B8A48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4FCC68-62CE-4BCC-999B-682AE0B8A48C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6882E46-2D65-4443-B491-CBFB1EB4FEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6882E46-2D65-4443-B491-CBFB1EB4FEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6882E46-2D65-4443-B491-CBFB1EB4FEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6882E46-2D65-4443-B491-CBFB1EB4FEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840E277A-8315-4B6D-B56C-7282B02EAB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840E277A-8315-4B6D-B56C-7282B02EAB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840E277A-8315-4B6D-B56C-7282B02EAB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840E277A-8315-4B6D-B56C-7282B02EAB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532F2594-B545-4F38-8BFF-017984E9B326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532F2594-B545-4F38-8BFF-017984E9B326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532F2594-B545-4F38-8BFF-017984E9B326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532F2594-B545-4F38-8BFF-017984E9B326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
