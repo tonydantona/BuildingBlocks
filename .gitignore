@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/IEnumerable/bin/Debug
+/IEnumerable/obj/Debug
+/IEnumerable/obj/Debug
+/UnderstandingDelegates/bin/Debug
+/UnderstandingDelegates/obj/Debug
+/.vs/BuildingBlocks/v15/.suo
+/zzzTestingIEnumerable/bin/Debug
+/zzzTestingIEnumerable/obj/Debug
+/zzzzTestingDelegates/bin/Debug
+/zzzzTestingDelegates/obj/Debug
+/BuildingBlocks.sln.DotSettings.user
