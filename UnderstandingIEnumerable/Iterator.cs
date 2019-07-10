@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace IEnumerable
+namespace UnderstandingIEnumerable
 {
     public class Iterator
     {
@@ -13,13 +10,13 @@ namespace IEnumerable
         // a state engine in IL so we can create methods that retain their state w/o us having to write that code
         public static IEnumerable<int> YieldReturnOneTwoThree()
         {
-            Console.WriteLine("Returning 1");
+            Console.WriteLine("Returning 1 from called method");
             yield return 1;
 
-            Console.WriteLine("Returning 2");
+            Console.WriteLine("Returning 2 from called method");
             yield return 2;
 
-            Console.WriteLine("Returning 3");
+            Console.WriteLine("Returning 3 from called method");
             yield return 3;
         }
     }

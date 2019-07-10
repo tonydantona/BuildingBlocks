@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
-using IEnumerable;
+using CommonTypes;
 using NUnit.Framework;
+using UnderstandingIEnumerable;
 
 namespace zzzTestingIEnumerable
 {
@@ -17,7 +18,7 @@ namespace zzzTestingIEnumerable
         [Test]
         public void TestExtenstionMethods()
         {
-            //var clicks = ToClicks("10:00");
+            //var clicks = ToClicks("10:30");
             var clicks = "10:30".ToClicks();
             Console.WriteLine(clicks);
         }
@@ -25,14 +26,14 @@ namespace zzzTestingIEnumerable
         public int ToClicks(string time)
         {
             // convert to clicks code here
-            return 0;
+            return 1050;
         }
 
         [Test]
         public void TestOurEvenOnlyExtensionMethod()
         {
             int[] source = { 1, 3, 6, 9, 10 };
-
+             
             var result = source.OnlyEven();
             
         }
@@ -43,6 +44,7 @@ namespace zzzTestingIEnumerable
         {
             var stops = new Stops();
 
+            // OrderBy does not alter the original list
             var sorted = stops.OrderByDescending(s => s.StopID);
             sorted.ElementAt(0).StopID = 88;
 
@@ -57,9 +59,6 @@ namespace zzzTestingIEnumerable
             {
                 Debug.WriteLine(stop);
             }
-
-            
-
         }
     }
 }

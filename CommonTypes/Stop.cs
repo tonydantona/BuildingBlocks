@@ -1,10 +1,11 @@
 using System;
 
-namespace IEnumerable
+namespace CommonTypes
 {
     public class Stop : IEquatable<Stop>, IComparable<Stop>
     {
         public int StopID { get; set; }
+        public int ODO { get; set; }
 
         public bool Equals(Stop other)
         {

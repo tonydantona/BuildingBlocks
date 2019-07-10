@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace IEnumerable
+namespace CommonTypes
 {
     public class Stops : IEnumerable<Stop>
     {
@@ -31,6 +31,14 @@ namespace IEnumerable
         IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public void OptimizeStops()
+        {
+            for (int i = 0; i < ArraySize; i++)
+            {
+                _stops[i].ODO = i;
+            }
         }
     }
 }

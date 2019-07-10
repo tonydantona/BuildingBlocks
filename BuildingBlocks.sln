@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEnumerable", "IEnumerable\IEnumerable.csproj", "{14A0967E-1D9C-4BB7-9EBA-F618A602F156}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzTestingIEnumerable", "zzzTestingIEnumerable\zzzTestingIEnumerable.csproj", "{118200FA-1CD0-4BF9-86E8-7975235B255A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingDelegates", "UnderstandingDelegates\UnderstandingDelegates.csproj", "{6D8E7E63-CCFB-4645-89F3-A1C36FA5F7A3}"
@@ -19,16 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingInterfaces", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzzzTestingInterfaces", "zzzzzTestingInterfaces\zzzzzTestingInterfaces.csproj", "{532F2594-B545-4F38-8BFF-017984E9B326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTypes", "CommonTypes\CommonTypes.csproj", "{E6DB7440-5486-4A6E-B6E4-C646CF2ACC77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingIEnumerable", "UnderstandingIEnumerable\UnderstandingIEnumerable.csproj", "{32A43E6A-14D0-4F56-A0C1-77880A10B225}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14A0967E-1D9C-4BB7-9EBA-F618A602F156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14A0967E-1D9C-4BB7-9EBA-F618A602F156}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14A0967E-1D9C-4BB7-9EBA-F618A602F156}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14A0967E-1D9C-4BB7-9EBA-F618A602F156}.Release|Any CPU.Build.0 = Release|Any CPU
 		{118200FA-1CD0-4BF9-86E8-7975235B255A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{118200FA-1CD0-4BF9-86E8-7975235B255A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{118200FA-1CD0-4BF9-86E8-7975235B255A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,8 +55,19 @@ Global
 		{532F2594-B545-4F38-8BFF-017984E9B326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{532F2594-B545-4F38-8BFF-017984E9B326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{532F2594-B545-4F38-8BFF-017984E9B326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6DB7440-5486-4A6E-B6E4-C646CF2ACC77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6DB7440-5486-4A6E-B6E4-C646CF2ACC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6DB7440-5486-4A6E-B6E4-C646CF2ACC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6DB7440-5486-4A6E-B6E4-C646CF2ACC77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A43E6A-14D0-4F56-A0C1-77880A10B225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A43E6A-14D0-4F56-A0C1-77880A10B225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A43E6A-14D0-4F56-A0C1-77880A10B225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A43E6A-14D0-4F56-A0C1-77880A10B225}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE6E0C4E-B700-4BBB-BC21-FEFAC952E5C3}
 	EndGlobalSection
 EndGlobal
