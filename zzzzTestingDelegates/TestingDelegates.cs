@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using CommonTypes;
 using NUnit.Framework;
@@ -7,24 +9,25 @@ using UnderstandingDelegates;
 namespace zzzzTestingDelegates
 {
     [TestFixture]
+    [SuppressMessage("ReSharper", "SuggestVarOrType_Elsewhere")]
     public class TestingDelegates
     {
         // declare the delegate type
-        public delegate void MessageProc(string s);
+        public delegate void MessageProcessor(string s);
         [Test]
         public void TestDelegateUsingDelegateType()
         {
-            Person tony = new Person("Tony");
+            Person person = new Person("TheBorg");
 
             // use the delegate type to declare a delegate
-            MessageProc proc;
+            MessageProcessor proc;
 
             // instantiate the delegate instance with our method
-            proc = new MessageProc(tony.Speak);
+            proc = new MessageProcessor(person.Speak);
 
             // invoke the instance
-            proc("hello");
-            proc.Invoke("hello again");
+            proc("Resistance is futile");
+            proc.Invoke("You will be assimilated");
         }
 
         [Test]
@@ -80,9 +83,10 @@ namespace zzzzTestingDelegates
         [Test]
         public void TestPassingDelegate()
         {
-            var delClass = new DelegatesAsParams();
             Action<int> currentDisplay = CurrentDisplay;
-            delClass.DisplayMe(currentDisplay);
+            DisplayMe(currentDisplay);
+            //var delClass = new DelegatesAsParams();
+            //delClass.DisplayMe(currentDisplay);
         }
 
         private void CurrentDisplay(int i)
@@ -90,17 +94,45 @@ namespace zzzzTestingDelegates
             Console.WriteLine(i);
         }
 
+        private void DisplayMe(Action<int> displayer)
+        {
+            List<int> list = new List<int> { 1, 2, 3, 4, 5 };
+
+            foreach (var item in list)
+            {
+                displayer(item);
+            }
+        }
+
         [Test]
         public void TestPassingDelegateUsingLambda()
         {
-            var delClass = new DelegatesAsParams();
-            Func<int, bool> predicate = x => x > 3;
+            //var delClass = new DelegatesAsParams();
 
-            var result = delClass.Filter(predicate);
+            Func<int, bool> predicate = x => x > 3;
+            //bool predicate(int x) => x > 3;
+
+            var result = Filter(predicate);
             foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
+        }
+
+        private IEnumerable<int> Filter(Func<int, bool> delegateFilter)
+        {
+            List<int> list = new List<int> { 1, 2, 3, 4, 5 };
+            List<int> result = new List<int>();
+
+            foreach (var item in list)
+            {
+                if (delegateFilter(item))
+                {
+                    result.Add(item);
+                }
+            }
+
+            return result;
         }
     }
 }

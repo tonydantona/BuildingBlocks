@@ -118,7 +118,7 @@ namespace zzzTestingIEnumerable
             Stops stops = new Stops();
 
             // linq returns IEnumerable
-            var results = stops.Where(s => s.StopID > 2);
+            IEnumerable<Stop> results = stops.Where(s => s.StopID > 2);
 
             // verify that the IEnumerable results IS a reference to stops
             foreach (var result in results)
@@ -130,6 +130,10 @@ namespace zzzTestingIEnumerable
             {
                 Console.WriteLine(stop);
             }
+
+            // unless .ToList() is used
+            Stops stops2 = new Stops();
+            IEnumerable<Stop> results2 = stops.Where(s => s.StopID > 2).ToList();
 
         }
 
